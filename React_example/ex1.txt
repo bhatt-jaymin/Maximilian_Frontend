@@ -1,0 +1,93 @@
+1) Components :- 
+
+[The core UI building block-compose UI by combining multiple components]
+
+==> Components are UI building blocks.
+
+it's building of the blocks of react A/p . A componeny a self contained module [html+css+JS] that renders are output
+
+=======
+Notes =
+=======
+
+Separation of Concerns ==> Any Websites/Apps can ve broken down into smaller building blocks : components it also handle different data and logics 
+                           Vastly simplifies the process of working in complex apps 
+
+Related code Lives Together ==> It can be therfore built by creating & combining[HTML+css+Javascript] code together and make such components 
+                                Since JS influence the output storing JS+HTML to make sense
+
+Reusable Building Blocks ==> The same component is used multiple time [Reusable building blocks ] with different parts of UI input data [ex a reusable button]
+
+
+****************************************************************
+2 Important Rules for Components Functions
+****************************************************************
+
+A) Name Start with Uppercase character 
+
+==> The function name Start with Uppercase 
+==> Multi-Words Names should be written Pascal Case[ex MyHeader]
+==> Pick Name that describe the UI building block [eg "Header" or "MyHeader"]
+
+B) Returns "renderable" content
+
+==> function must returns value that can be rendered ("display on Screen") by react
+==> In most cases: Returns JSX also allows String,number,boolean,null,array of allowed values
+
+
+
+
+function(){
+    return<h1>Hello JS</h1>;
+}
+
+2) JSX :- 
+
+[Return (Potentially Dynamic) HTML(ish) code to define the actual markup that will be rendered]
+
+JSX is a syntax extensions to Javascript. it's similar to a template language but it has full power of Javascript (e.g it may output dynamic content)
+
+<div>
+
+<h1> Welcome {username} </h1>
+<P>Time to learn react </p>
+
+</div>
+
+
+3) Props :- 
+
+[Make Components configurable (and therefore reusable) by passing input data to them]
+
+Components accept arbitary inputs called props. they are like function argument
+
+function Welcome (props){
+    return <h1>Hello,{props.name}</h1>;
+}
+
+
+4) State :- 
+
+[React-managed data which,when changed causes component to re-render & the UI to update ]
+
+It allows React component to change their output over time in response to user action network response and anything else
+
+function counter (){
+
+        const[isVisible,setIsVisible]=useState(false);
+        
+        function handleClick(){
+            setIsVisible(true);
+        }
+
+
+        }
+
+
+REACT ESSENTIALS  [Components,JSX & State]
+====================
+
+===> building UI with Components
+===> Using Sharing & Outputing Data
+===> Handling User Events
+===> Building Interactive UIs with State
