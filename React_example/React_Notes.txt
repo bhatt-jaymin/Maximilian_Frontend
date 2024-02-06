@@ -106,3 +106,17 @@ InBuild Components                                                      Custom C
 1) Name Start with lowercase                                        || 1) Name Start with Uppercase
 2) Only valid officialy defined HTML elements are allowed           || 2) Defined by User "Wraps built in other custom components"
 3) Aee rendered as DOM nodes by React(i.e. displayed on the Screen) || 3) React "travers" the componenttree until it has only built-in component left
+
+
+==============================================================================================================
+
+Diffrence Between In Static content and Dynamic content
+
+==============================================================================================================
+
+
+Static content                                            Dynamic content
+
+1) content that's hardcoded into the JSX code   || 1) Logic that produce the actualvalue is added to JSX
+2) Can't Change Runtime                         || 2) content /Value is derived at Runtime
+3) Ex:- <h1>Hello World </h1>                   || 3) Ex <h1>Hello {username} </h1> 
