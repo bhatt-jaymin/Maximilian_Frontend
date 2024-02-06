@@ -91,3 +91,18 @@ REACT ESSENTIALS  [Components,JSX & State]
 ===> Using Sharing & Outputing Data
 ===> Handling User Events
 ===> Building Interactive UIs with State
+
+
+
+==============================================================================================================
+
+Diffrence Between In Build Components and Custom Components
+
+==============================================================================================================
+
+
+InBuild Components                                                      Custom Components 
+
+1) Name Start with lowercase                                        || 1) Name Start with Uppercase
+2) Only valid officialy defined HTML elements are allowed           || 2) Defined by User "Wraps built in other custom components"
+3) Aee rendered as DOM nodes by React(i.e. displayed on the Screen) || 3) React "travers" the componenttree until it has only built-in component left
