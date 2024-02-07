@@ -129,3 +129,22 @@ React Code ===>                          Build Process                          
                                       [- Transform such that run in browser]        Optimized code any other extra Assets 
                                       [- Also Optimize other assets like CSS        eg CSS code files, Optimize images etc   ]
                                       and Image files]
+
+
+
+
+                                               Configure Components With "Props"
+
+                   '   React Allows you to Pass Data to Component Via Concept called "Props" '
+                  =======================================================================================
+                  
+                                    Set Props                                       Receive Props
+JSX Code that use a Component        =====>                  Component                =====>                   Component Functions
+
+
+[set component input Data                        [- Define Internal Logic +JSX code                [Receive Props paramentr with Configure Data]
+via "custom HTML attributes(Props)"]                That should be rendered]                      
+          
+                                      
+           
+           
