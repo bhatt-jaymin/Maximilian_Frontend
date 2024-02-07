@@ -1,4 +1,5 @@
 import React from "react";
+import reactIMG from "../src/assets/react.png";
 import "./index.css";
 
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
@@ -6,61 +7,40 @@ const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 function RandomInt(max) {
   return Math.floor(Math.random() * (max + 1));
 }
+
 function Header() {
   const description = reactDescriptions[RandomInt(2)];
-  console.log(description);
   return (
     <header>
-      <h3 className="text-center	text-5xl text-rose-800	font-weight: 900 font-normal;">
+      <h3 className="underline-offset-4	text-center text-5xl text-rose-800 font-bold py-16	">
         React Essential
       </h3>
-      <div>
-        <p className="font-weight: 700 text-3xl">
-          <h3 className="text-center text-violet-300">
-           
-            <br />
-            <br />
-            {description} React Concept you will need almost by app you are
-            going to Build !
-          </h3>
-
-          <div>
-            <img
-              src="https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_react_icon_158742.png"
-              alt="React Logo"
-            ></img>
-          </div>
+      <div className="flex justify-center">
+        <img src={reactIMG} alt="React Logo" />
+      </div>
+      <div className="text-center text-violet-300">
+        <br />
+        <p className="font-bold text-3xl">
+          {description} React concepts you will need for almost every app you are going to build!
         </p>
       </div>
     </header>
   );
 }
+
+function Footer() {
+  return (
+    <footer className="text-center text-fuchsia-200 text-5xl py-10">
+      Time to Practice!
+    </footer>
+  );
+}
+
 function App() {
   return (
-    <div className="bg-lime-600" id="app">
-      <br />
-      <br />
-      <br />
+    <div className="bg-lime-600 min-h-screen flex flex-col justify-between">
       <Header />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1 className="text-fuchsia-200 text-5xl text-center">
-        Time to Practice!
-      </h1>
+      <Footer />
     </div>
   );
 }
