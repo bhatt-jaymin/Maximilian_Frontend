@@ -120,3 +120,12 @@ Static content                                            Dynamic content
 1) content that's hardcoded into the JSX code   || 1) Logic that produce the actualvalue is added to JSX
 2) Can't Change Runtime                         || 2) content /Value is derived at Runtime
 3) Ex:- <h1>Hello World </h1>                   || 3) Ex <h1>Hello {username} </h1> 
+
+
+REACT Project  & The Build process
+
+React Code ===>                          Build Process                                    ===> Deployable files
+[code write and test ]                [- Change and optimize your code]             [A collection of generated files that can includes your
+                                      [- Transform such that run in browser]        Optimized code any other extra Assets 
+                                      [- Also Optimize other assets like CSS        eg CSS code files, Optimize images etc   ]
+                                      and Image files]
