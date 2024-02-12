@@ -147,4 +147,43 @@ via "custom HTML attributes(Props)"]                That should be rendered]
           
                                       
            
-           
+Rules of Hooks
+
+1) Only call Hooks inside of Component  Functions
+
+==> React Hooks Must not be called outside of react component function
+
+
+function apps(){                            || const [val, setval]=useState(0);   
+    const [val, setval]=useState(0);        || function apps(){...}
+}                                           ||    
+
+
+
+2) Only call Hooks on the Top level
+
+==> React Hooks Must not be called in nested code stament (eg inside of if else stament)
+
+
+function apps(){                            || function apps(){  
+    const [val, setval]=useState(0);        || if (someCondition)
+}                                           || const [val, setval]=useState(0); }   
+
+
+Manage State 
+================
+
+Manage data & "tell" REACT to re-execute a component function via REACT's useState() Hooks
+
+State update lead to new State values
+(as the component function execute again)
+
+const[counter,setCounter]=useState(0);
+
+Current State value ==> "It's provided by React may change if the component
+                        function is executed again"
+
+State updating function ==> "update the store value & 'tells' React to re-execute
+                             the component function in which useState() was called"
+
+Initial State Value ===> store by react
