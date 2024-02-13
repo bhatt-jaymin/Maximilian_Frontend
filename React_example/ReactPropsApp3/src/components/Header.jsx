@@ -18,11 +18,27 @@ export default function Header() {
     setSelectedTopic(selectedButton);
   }
 
+  let tabContent = <p className="text-1xl mt-8">Please Select a Topic</p>;
+
+  if (selectedTopic) {
+    tabContent = (
+      <div id="tab-content" className="text-1xl mt-8 ml-28 text-left">
+        <>
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+          <pre>
+            <code>{EXAMPLES[selectedTopic].code}</code>
+          </pre>
+        </>
+      </div>
+    );
+  }
+
   const description = reactDescriptions[RandomInt(2)];
   console.log(description);
   return (
     <header>
-      <h3 className="underline-offset-4 text-center text-5xl text-rose-800 font-bold py-16">
+      <h3 className="underline-offset-4 text-center text-5xl text-violet-300 font-bold py-16">
         React Essential
       </h3>
       <div className="flex justify-center opacity-10">
@@ -36,10 +52,12 @@ export default function Header() {
         </p>
         <section id="core-concept">
           <ul className="flex justify-center">
-            <CoreConcept {...CORE_CONCEPTS[0]} />
+            {CORE_CONCEPTS.map((conceptItem) =>(  <CoreConcept key={conceptItem.title} {...conceptItem} />
+            ))}
+           {/*  <CoreConcept {...CORE_CONCEPTS[0]} />
             <CoreConcept {...CORE_CONCEPTS[1]} />
             <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} /> */}
           </ul>
         </section>
         <section id="examples">
@@ -52,6 +70,7 @@ export default function Header() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
+          {tabContent}
           {/* {!selectedTopic ? (                                           // Using Ternary Operator
             <p className="text-1xl mt-8">Please Select a Topic</p>
           ) : (
@@ -72,7 +91,7 @@ export default function Header() {
             </div>
           )} */}
 
-          {!selectedTopic && (                                        // Using Logical Operator
+          {/*  {!selectedTopic && (                                        // Using Logical Operator
             <p className="text-1xl mt-8">Please Select a Topic</p>
           )}
           {selectedTopic && (
@@ -85,7 +104,7 @@ export default function Header() {
                 </pre>
               </>
             </div>
-          )}
+          )} */}
         </section>
       </div>
     </header>
