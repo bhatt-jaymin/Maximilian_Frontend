@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-    background-color:rgb(5, 5, 5); /* Set your desired background color */
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
-  }

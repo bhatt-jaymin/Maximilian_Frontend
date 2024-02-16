@@ -3,6 +3,7 @@
 [The core UI building block-compose UI by combining multiple components]
 
 ==> Components are UI building blocks.
+==> REACT Appllication is a tree of components with App Component as the root bringing everything together.
 
 it's building of the blocks of react A/p . A componeny a self contained module [html+css+JS] that renders are output
 
@@ -187,3 +188,17 @@ State updating function ==> "update the store value & 'tells' React to re-execut
                              the component function in which useState() was called"
 
 Initial State Value ===> store by react
+
+
+
+YOU Dont need JSX (But It's Convinebt)      ||
+
+<div>                                       ||    React.createElement(
+<p> Hello World </p>                        ||    'div'                     // Component type(Identifiers the to be render component)
+</div>                                      ||    {id: 'content'}.
+                                            ||      React.createElement(    // Props Object (Sets component Props)
+                                            ||         'p',
+                                            ||        null,
+                                            ||        'Hello World'         //  Child content (The content Passed Between the component tags)
+                                            ||      )  
+                                            ||      );

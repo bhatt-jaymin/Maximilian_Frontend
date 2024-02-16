@@ -1,0 +1,36 @@
+JS library to build dynamic and interactive UI
+Devloped at FB in 2011
+Currently mostly widely used JS library for Frontend D/v
+Used to create SPA
+
+
+DOM
+
+Browser takes HTML and Create DOM
+JS helps us modify DOM based on user actions or events
+In big a/p working with DOM become more complicated
+
+
+Problem with JS
+
+React has a simple mental model
+JS is a cumbersome
+JS is Error prone
+JS is Hard to maintain
+
+
+
+Working of React
+
+No need to worry about querying and Updating DOM
+React creates a web page with small and reusable 
+React will take care of creating and Updating DOM element
+
+
+JS V/s JSX
+
+==> stands for jS                               || stands for JS XML
+==> contain regular JS code                     || combines JS with html -like tags
+==> used for general logic and components       || Make it easier to design UI components
+
+
