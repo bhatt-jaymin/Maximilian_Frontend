@@ -84,9 +84,9 @@ Using Node Core Modules
 
 http        ==> Launch server, send request
 https       ==> Launch SSL server
-fs          ==> 
-path
-os
+fs          ==>  fetch file
+path        ==> path file
+os          ==> version of browser/system
 =======================
 Streams and Buffers
 =======================
@@ -104,6 +104,37 @@ Start working on the Data Early
 
 Working with Request and Response
 
-
-
 Async Code & The Event Loop
+
+
+
+Incoming Request
+        ||
+        ||
+        ||
+        ||
+    \/==||================\/
+your code        Single JS thread====> fs  ======> send to =====> Worked pool===> Different Threads 
+                        ||                                      Do the Heavy lifting    
+                        ||
+                        ||===>start===> Event Loop
+                                Handle Event call back
+
+
+Event Loop
+
+Timers [Executes setInterval callbacks]                                                                 process.exit [refs==0]
+
+    /|\    Pending callbacks [Executes I/O-related callbacks that were deferred]  <====
+     |                       ||                                                       |                  
+   jump                      || I/O ?                                                 |  
+timer execute                ||                                                       |  or defer execution
+    ||                       \/                                                       |   
+                     Input and Output                                                 |  
+    ||          Disk & n/w operations(~ Blocking Operation)                           |
+                            ||                                                        |  
+    ||                      ||                                                        |  
+                            ||                                                        |  
+    ||                      \/                                                        |  
+                           Poll                                                       |          
+    ==== Retrive new I/O events execute their callbacks    ===========================   
