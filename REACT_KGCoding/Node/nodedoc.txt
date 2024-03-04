@@ -97,8 +97,8 @@ Streams =====> request Body Part 1 =====> request Body Part 2 =====> request Bod
 
 ||                  ||                      || How do you                   ||                      ||
 ||                  ||    My Code           || work with flow data          ||                      ||
-||                  ||=============> ====>  ||==================            ||=====> Buffer=========||
-||==> Idea 
+||                  ||=============> ====>  ||==================>           ||=====> Buffer=========||
+||==> Idea                                      work with chunk data
 Start working on the Data Early
 
 
