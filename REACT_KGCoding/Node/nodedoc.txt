@@ -1,0 +1,109 @@
+Node JS is runtime JS
+
+node JS ===> uses====>V8
+||                       =====> Compiles to ===> Machine Code
+||                    ^^   
+||                    ||  
+||                    || 
+||==>C++===> Written In 
+||                  ||
+||                  ||
+||======> JS===> compiles JS
+
+
+
+client[Browser] =====> req=====> Server [http:.....]---> DB,auth,input validation [Node JS]
+JS,html,CSS                <===== res <======||
+
+
+Role of Node JS
+
+Run Server :- create Server & Listen to incoming request
+
+Bussiness Logic :- Handle request , Validate Input , Connect to database
+
+Return Response :- Return Response[rendered HTML,JSON,...]
+
+
+
+Course
+
+Basics                          Done
+JS concepts                     Done
+Node JS Basics
+Efficeint devlopment
+Using Express JS
+Template Engine
+MVC 
+Adv Routes & Modules
+Node + My SQL
+Using sequlize
+Node + No SQL [Mongo DB]
+Mongoose
+Sessions & Cookies
+Authentication
+Sending Emails
+Authentication Deep dive
+User Input validation
+Error Handling
+File Uploads & Downloads
+Pagination
+Async request
+Handling Payments
+Rest API [Basics]
+Rest API Features [Advance]
+Using Async Wait
+Websocket and Socket Io
+GraphQL
+Deployment
+Beyond Web Servers
+Node +  TypeScript + Deno
+
+
+
+Basics
+===========
+
+REPL means
+
+R means ===>  Read  User Input
+E means ===> Evaluate User Input
+P means ===> Print Output (Results)
+L means ===> Wait for new Input
+
+
+Node JS Basics
+===============
+
+
+How Does the Web Work
+
+Creating a Node.JS Server
+
+Using Node Core Modules
+
+http        ==> Launch server, send request
+https       ==> Launch SSL server
+fs          ==> 
+path
+os
+=======================
+Streams and Buffers
+=======================
+
+Examples :- Incoming Request
+
+Streams =====> request Body Part 1 =====> request Body Part 2 =====> request Body Part 3 =====> request Body Part 4 =====> Fully Parsed
+
+||                  ||                      || How do you                   ||                      ||
+||                  ||    My Code           || work with flow data          ||                      ||
+||                  ||=============> ====>  ||==================            ||=====> Buffer=========||
+||==> Idea 
+Start working on the Data Early
+
+
+Working with Request and Response
+
+
+
+Async Code & The Event Loop

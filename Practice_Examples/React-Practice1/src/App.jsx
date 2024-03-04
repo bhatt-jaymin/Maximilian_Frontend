@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="bg-green-800 h-screen ">
+        <header>
+          <img
+            src="src/img/1.png"
+            alt="header img"
+            style={{
+              width: "1500px",
+              height: "200px",
+              display: "block",
+              margin: "auto",
+            }}
+          />
+        </header>
+        <main className="text-center font-semibold text-4xl text-slate-400 mt-3">
+          Purchase Plants Items
+          <ul className="flex border-b mt-3">
+            <li className="-mb-px mr-1">
+              <a
+                className="bg-lime-600 inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-300 font-semibold"
+                href="#"
+              >
+                Flowers
+              </a>
+            </li>
+            <li className="mr-1">
+              <a
+                className="bg-lime-600 inline-block py-2 px-4 text-blue-300 hover:text-blue-800 font-semibold"
+                href="#"
+              >
+                Small Plants
+              </a>
+            </li>
+            <li className="mr-1">
+              <a
+                className="bg-lime-600 inline-block py-2 px-4 text-blue-300 hover:text-blue-800 font-semibold"
+                href="#"
+              >
+                Gardning Items
+              </a>
+            </li>
+            <li className="mr-1">
+              <a
+                className="bg-lime-600 inline-block py-2 px-4  text-blue-300 hover:text-blue-800 font-semibold"
+                href="#"
+              >
+                Branches and Leaves
+              </a>
+            </li>
+          </ul>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
