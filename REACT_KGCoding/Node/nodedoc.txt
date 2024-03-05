@@ -138,3 +138,47 @@ timer execute                ||                                                 
     ||                      \/                                                        |  
                            Poll                                                       |          
     ==== Retrive new I/O events execute their callbacks    ===========================   
+
+
+
+    Module Summary
+=========================================
+
+Client ===> Request ====> Server ====> Response ===> Client   [How Web works]
+
+Program Lifecycle and Event Loop
+--------------------------------
+
+-> Node.js Run non-blocking js code and uses an events driven code [Event Loop] for running your Logic
+
+-> A Node Program exit asap there is no more work to do
+
+Note createServer() event never finished by defult
+
+
+Async Code
+--------------------------------
+
+-> Js code is non-blocking
+-> use callbacks and event => Order changes
+
+
+Request and Response
+--------------------------------
+
+-> Parse request data in chunk [Streams and Buffer]
+-> Avoid "Double response"
+
+Node.js & Core Modules
+--------------------------------
+
+-> Node.js ships with multiple Core modules [http,https,fs,path...]
+-> Core modules can be imported into any fileto be used there 
+-> Import via require ('Module')
+
+
+The Node Module system
+--------------------------------
+
+-> Import via require ('./path-to-file') for custom file or require ('Module') for Core and third-party modules 
+-> Export via Module.Exports or just Export (for multiple Export)
