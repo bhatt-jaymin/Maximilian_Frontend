@@ -1,0 +1,44 @@
+/* // What is Express JS
+
+Server side logic pretty Complex you want to focus on bussiness logic not on the nitty gritty details
+Use a framework for the Heavy Lifting
+
+Alternative to Express JS
+
+Vanila node JS
+Adonis JS
+Koa
+Sails.JS
+
+*/
+
+
+// Using Middleware
+
+Request
+ |
+ |
+\|/
+
+Middleware  (req,res,next)=>{...}
+
+  | next
+  |
+ \|/
+Middleware (req,res,next)=>{...}
+
+  |  req.send()
+  |
+ \|/
+Response
+  |
+  |
+ \|/
+
+// Working with Request and Response [Elegantly]
+
+// Routing
+
+// Returning HTML Pages [Files]
+
+
