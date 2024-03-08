@@ -1,26 +1,12 @@
+// routes/admin.js
+
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+const rootDir = require('../Utilities/path');
 
 router.get('/add-product', (req, res, next) => {
-    res.send(`<!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            html, body {
-                margin-top: 100px;
-                padding: 0;
-                background-color: black;
-                color: white;
-            }
-            .container {
-                padding: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <form action="/admin/add-product" method="POST"><center><input type ="text" name="title"><button type="submit">Send</button></center></form>
-    </body>`
-    );
+    res.sendFile(path.join(rootDir, 'Views', 'add-product.html'));
 });
 
 router.post("/add-product", (req, res, next) => {

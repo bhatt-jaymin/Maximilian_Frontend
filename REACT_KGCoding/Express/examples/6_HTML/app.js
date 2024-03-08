@@ -1,40 +1,27 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 
-const adminRoutes = require("./Routes/admin"); // Admin routes should be included here
-const shopRoutes = require("./Routes/shop"); // Shop routes should be included here
+const adminRoutes = require("./Routes/admin");
+const shopRoutes = require("./Routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/admin', adminRoutes); // Mount admin routes at /admin
-app.use('/', shopRoutes); // Mount shop routes at root
+// Serve static files from the 'Public' directory
+app.use(express.static(path.join(__dirname, 'Public')));
+// This will serve files from the '/CSS' directory under the '/CSS' URL path
+app.use('/CSS', express.static(path.join(__dirname, 'Public', 'CSS')));
+
+
+app.use('/admin', adminRoutes);
+app.use('/', shopRoutes);
 
 app.use((req, res, next) => {
-    res.status(404).send(`<!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            html, body {
-                margin: 0;
-                padding: 0;
-                background-color: black;
-                color: white;
-            }
-            .container {
-                padding: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1 style="text-align: center;">Page Not Found</h1>
-            <p style="text-align: center;">Sorry, the page you're looking for could not be found.</p>
-        </div>
-    </body>
-    </html>
-    `);
+    res.status(404).sendFile(path.join(__dirname, 'Views', '404.html'));
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
