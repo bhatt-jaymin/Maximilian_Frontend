@@ -30,10 +30,10 @@ Course
 
 Basics                          Done
 JS concepts                     Done
-Node JS Basics
-Efficeint devlopment
-Using Express JS
-Template Engine
+Node JS Basics                  Done
+Efficeint devlopment            Done
+Using Express JS                Done
+Template Engine                 Done
 MVC 
 Adv Routes & Modules
 Node + My SQL
@@ -182,3 +182,8 @@ The Node Module system
 
 -> Import via require ('./path-to-file') for custom file or require ('Module') for Core and third-party modules 
 -> Export via Module.Exports or just Export (for multiple Export)
+
+
+Manage Data without DB
+Render Dynamic content in our views
+Understanding Template Engine

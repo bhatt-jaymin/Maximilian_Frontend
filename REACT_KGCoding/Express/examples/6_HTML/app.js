@@ -9,9 +9,9 @@ const shopRoutes = require("./Routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Serve static files from the 'Public' directory
+
 app.use(express.static(path.join(__dirname, 'Public')));
-// This will serve files from the '/CSS' directory under the '/CSS' URL path
+
 app.use('/CSS', express.static(path.join(__dirname, 'Public', 'CSS')));
 
 

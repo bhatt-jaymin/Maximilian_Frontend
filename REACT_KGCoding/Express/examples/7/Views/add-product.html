@@ -1,0 +1,28 @@
+<!-- add-product.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin || Add Product</title>
+    <link rel="stylesheet" href="/css/productstyle.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header_nav">
+            <ul class="main-header_item-list">
+                <li class="main-header_item"><a href="/">Shop</a></li>
+                <li class="main-header_item"><a class="active" href="/admin/add-product">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form class="product-form" action="/admin/add-product" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>  
+                <input type="text" name="title" id="title">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
