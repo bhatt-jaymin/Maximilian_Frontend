@@ -1,0 +1,163 @@
+Backend Devloper RoadMap
+
+Ans :- Backend devloper is type of programmer who focus on creating the underlying logic and servers side software that powers of website and Applications
+
+Primary responsibilities
+
+Server Side Logics -> they write code that runs on web servers which handle bussiness logic of applications this includes processing user requests
+                      interacting db and controlling flow data between server and the front end of website  or application.
+
+DBMS->  Backend devloper are often responsible for designing, implementing and maintainning databases they manage and manupulate the data that stored 
+        inthe db ensuring integrity and security.
+
+API Devlopment :-> Which Allows different software Applications to communicate with each other APIS crucial for the integrations of the different System
+                   and for enabling frontend Applications to access server side functions and Data.
+
+Server Management :-> they may also be involved in configuring and managing the server  where the applications runs this can inculde setting up 
+                    cloud based server managing server resources and securing uptime and performance 
+
+Security:-> its ensuring the security of the web application is a key part of backend devloper job this includes protecting against cyber threat
+            securing data and implementing authentication and authorization schemes 
+
+
+Backend Programming Language
+============================
+
+Vanila JS [Node JS]
+
+-> Asynchronous
+-> Event Driven
+-> Scalabel & high performance applications
+
+
+Git and Github
+==============
+
+git is version control system that Allows devloper to track and manage their changes to their codebase
+
+1) its is a software
+2) its installed in a system
+3) its command line tool
+4) its tool manage different versions of edits made files in git repository
+5) it provides functionalities like version control system source code Management
+
+
+Github is a web based platform which leverages git and enables devloper to collabrate on projects review code and manage changes.
+
+1) its a service
+2) its hosted on web
+3) it provides GUI
+4) its space to upload a copy of git repository
+5) it provides functionalities of Git like VCS, source code Management as well as adding few its own features
+
+
+RDBMS
+=====
+
+Mysql,postgress,Oracle,MongoDB
+
+API
+===
+REST API
+GraphQL
+
+Caching 
+========
+its technique to store copies of data in a temporary storage area which helps in reducing the load on the backend system decreasing latency and 
+improving the performance of the web application backend devloper needs to where and how to implement caching Strategies effectively.
+
+
+API Security
+============
+its paramount to to protect sesitive data and prevent unauthorized access backend devloper should be familiar with best practice such as implementing
+authentication and authorization data encryption rate limiting and  regular security audits to safeguard the APIS.
+
+a) Improper Asset Management
+b) Code Injection
+c) Excessive Data Exposure
+d) Broken Object level - Function level authorization and Broken User authentication
+e) Insufficient Logging and Monitoring
+f) Function level authorization
+g) Security Misconfiguration
+h) User authentication
+i) Lack of resources & rate limiting
+k) Mass Assignment
+
+Testing
+=======
+Unit Testing
+integrations Testing
+End to End Testing
+
+Software Design and Architecture
+================================
+
+creating
+----------
+Scalabel
+maintainable
+Efficient
+
+Design Pattren
+==============
+Creation
+Structural
+Behavioral
+
+Message Brokers
+===============
+RabbitMQ
+Apache Kafka
+
+client req ---> Message Broker--->service 1
+                                  service 2
+                                  service 3
+
+Containerization
+===============
+Docker
+Kubernetes
+Openshift
+
+Nginx
+=====
+its popular webserver known for its high perfomance stability and Efficient resource usage backend devloper should understand
+how to configure engine X to server static files proxy requests and handle load balanceing which is crucial for building Scalabel and
+reliable web applications 
+
+GraphQL
+=======
+its query Language for API that allows client request exactly the data need making an efficeint alternative to traditional rest APIs 
+Backend devloper should understand how to implement GraphQL server to provides flexible and efficeint data access 
+
+
+
+GraphQL Use Cases
+
+GraphQL server with =====cloud==========>           servers
+connected DB      <========cloud==============
+
+
+GraphQL Layers =====cloud==========>           Legacy System, MicroServices , 3rd part APIS
+that integrate  <========cloud==============
+existing system 
+
+Firebase
+========
+its comprenhewnsive tool for building web and mobile application includes real time databases authentication and hosting its favord for rapid 
+Devlopment and its ability to scale automaticaly making it a popular choice for startups and agile projects 
+
+Redis
+======
+
+its inmemory DS store used as a databases Caching AND Message Broker its high perfomance and support for various Data Structure such as strings 
+hashes and lists make it invaluable for scenarios requring fast access to data such as caching
+
+
+Infrastructure Knowledge
+========================
+Cloud knowledge,Containerization Orchanization ,serverless computing ,Virtual Machine, Server, Networks how interconnected deliver Applications as well as
+it can significaly enhance the efficeintly and Scalabity of application
+
+
+NOTE:- Backend Devloper is a constantly shifting with new technology best practice refine regular above cover with SOLID principle.
