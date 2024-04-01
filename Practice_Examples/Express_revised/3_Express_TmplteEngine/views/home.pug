@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= docTitle
+    link(rel="stylesheet", href="../CSS/home.css")
+  body 
+    header.main-header
+      nav.main-header__nav
+        ul.main-header__item-list
+          li.main-header__item
+            a.active(href="/") Home 
+          li.main-header__item
+            a(href="/admin/create-users") New User
+
+    main 
+    if usrs.length>0
+      .grid 
+        h1.heading__title User Dashboard
+        each user in usrs    
+          article.card.product-item  
+            header.card__header 
+              h1.product__title #{user.title} 
+            div.card__image   
+              img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLc5FvgOBn4zXwXwhr4OOCaLQsQekFP477A0BeyCbSFb-c2PCzoxWwPhV6DtSQ6pLNoc4&usqp=CAU", alt="user_img")  
+            div.card__content 
+              h4.user__des Software Engineer
+              h4.user__skills HTML, CSS , JavaScript , MEAN , MERN , SOLID , Python , PHP , JAVA , C & C++
+              button.btn View
+    else 
+      h1.heading__title User Dashboard  
+        h1.notification__msg Empty User list  
+        
+           

@@ -197,3 +197,26 @@ Application Life Cycle
 Secure & Customise the Machine code as BR
 How to Customize Machine Code
 
+
+
+Template Engine  
+=========================
+   |                       |
+        |                       
+
+HTMLish Template ===============
+                        |
+                        |                       
+                        |       
+Node/Express content    |         Template Engine
+                        |
+                        \/
+            Replace PlaceHolders /Snippets
+                with HTML content
+                    |
+                    |                       
+                   \|/ 
+                HTML File   
+
+EJS                 PUG[JADE]       Handlebars
+<p><%=name%></p>    P#{name}        <p> {{name}} </p> 

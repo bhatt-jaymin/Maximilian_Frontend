@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= pageTitle
+    link(rel="stylesheet", href="../CSS/newusrstyle.css")
+  body 
+    header.main-header
+      nav.main-header__nav
+        ul.main-header__item-list
+          li.main-header__item
+            a(href="/") Home 
+          li.main-header__item
+            a.active(href="/admin/create-users") New User
+
+    main
+      form.user-form(action="/admin/users", method="POST")
+        .form-control(center)
+          label(for="title") User:- 
+          input(type="text", name="title")#title 
+          button(type="submit") Add New User
