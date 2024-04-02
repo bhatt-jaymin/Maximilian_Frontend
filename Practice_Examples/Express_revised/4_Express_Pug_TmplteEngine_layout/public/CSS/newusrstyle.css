@@ -52,13 +52,13 @@ body{
       .form-control input{
           display: block;
           width: 100%;
-          margin: 1%;
+          margin: 1rem;
       }
 
       .form-control input{
         border: 1px solid #69563c;
         font: inherit;
-        border-radius: 2px;
+        border-radius: 10px;
       }
 
       button{
@@ -74,4 +74,14 @@ body{
       button:active{
         background-color: rgb(153, 123, 153);
         color: white;
+      }
+
+
+      .title-input {
+        display: flex;
+        align-items: center;
+      }
+      
+      .title-input2 label {
+        margin-right: 3rem; 
       }
