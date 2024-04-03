@@ -1,0 +1,28 @@
+    <main>
+      {{#if hasUsers}}
+        <div class="grid">
+          <h1 class="heading__title">User Dashboard</h1>
+          {{#each usrs}}
+            <article class="card product-item">
+              <header class="card__header">
+                <h1 class="product__title">{{this.title}}</h1>
+              </header>
+              <div class="card__image">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLc5FvgOBn4zXwXwhr4OOCaLQsQekFP477A0BeyCbSFb-c2PCzoxWwPhV6DtSQ6pLNoc4&usqp=CAU"
+                  alt="user_img"
+                />
+              </div>
+              <div class="card__content">
+                <h4 class="user__des">{{this.desc}}</h4>
+                <h4 class="user__skills">{{this.skills}}</h4>
+                <button class="btn">View</button>
+              </div>
+            </article>
+          {{/each}}
+        </div>
+      {{else}}
+        <h1 class="heading__title">User Dashboard</h1>
+        <h1 class="notification__msg">Empty User list</h1>
+      {{/if}}
+    </main>

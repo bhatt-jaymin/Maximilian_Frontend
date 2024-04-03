@@ -6,7 +6,7 @@ const router = express.Router();
 
   router.get("/", (req, res, next) => {
     const users=adminData.users;
-    res.render('home',{usrs:users,pageTitle:'Home',path:'/'});
+    res.render('home',{usrs:users,pageTitle:'Home',path:'/',hasUsers:users.length>0});
 /*     console.log('Addusr :',adminData.students);
     res.sendFile(path.join(rootDir,'views','home.html')); */
   });

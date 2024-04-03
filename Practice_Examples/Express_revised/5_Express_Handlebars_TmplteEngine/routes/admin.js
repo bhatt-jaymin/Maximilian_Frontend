@@ -12,7 +12,7 @@ router.get("/create-users", (req, res, next) => {
 });
 
 router.post("/users", (req, res, next) => {
-  users.push({ title: req.body.title });
+  users.push({ title: req.body.title,desc: req.body.desc,skills:req.body.skills });
   res.send(
     '<script>alert("New User Registered Successfully...!"); window.location="/";</script>'
   );
