@@ -34,7 +34,7 @@ Node JS Basics                  Done
 Efficeint devlopment            Done
 Using Express JS                Done
 Template Engine                 Done
-MVC 
+MVC                             Done
 Adv Routes & Modules
 Node + My SQL
 Using sequlize
@@ -220,3 +220,14 @@ Node/Express content    |         Template Engine
 
 EJS                 PUG[JADE]       Handlebars
 <p><%=name%></p>    P#{name}        <p> {{name}} </p> 
+
+
+MVC
+==========
+
+Models ==> Represent Data in your code, Allow work with your data [save, fetch, etc]
+
+Views ==> It's What the User Sees, Decoupled from your Application code
+
+Controls [Routes, Split across Middleware Functions] ==> Connecting your Models and your Views , contains the "in-between" logic
+
