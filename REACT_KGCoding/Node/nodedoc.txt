@@ -225,9 +225,9 @@ EJS                 PUG[JADE]       Handlebars
 MVC
 ==========
 
-Models ==> Represent Data in your code, Allow work with your data [save, fetch, etc]
+Models ==> Represent & Managing Data in your code, Allow work with your data [save, fetch, etc],Does not Manage data in memory , files and database
 
 Views ==> It's What the User Sees, Decoupled from your Application code
 
-Controls [Routes, Split across Middleware Functions] ==> Connecting your Models and your Views , contains the "in-between" logic
+Controls [Routes, Split across Middleware Functions] ==> Connecting your Models and your Views , contains the "in-between" both direction communicate logic
 
