@@ -1,0 +1,74 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/CSS/newusrstyle.css" />
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <main>
+    <ul class="main-header__item-list">
+    </ul>
+    <center><h1 class="heading__title">Add User</h1></center>
+    <form class="user-form" action="/admin/users" method="POST">
+      <div class="form-control">
+        <label for="title">User:-</label>
+        <input type="text" name="title" id="title" />
+
+        <label for="imageURL">Image:-</label>
+        <input type="text" name="imageURL" id="imageURL" />
+
+        <label for="desc">Designation:-</label>
+        <input type="text" name="desc" id="desc" />
+
+        <label for="skills">Skills:-</label>
+        <input type="text" name="skills" id="skills" />
+
+        <label for="state">State:-</label>
+        <input type="text" name="state" id="state" />
+
+        <label for="city">City:-</label>
+        <input type="text" name="city" id="city" />
+
+        <label for="addrss">Address:-</label>
+        <textarea name="addrss" id="addrss" rows="3"></textarea>
+
+        <label for="phone">Phone:-</label>
+        <input type="number" name="phone" id="phone" />
+
+        <label for="gender">Gender:-</label>
+        <div class="wrapper-class">
+          <input type="radio" name="gender" id="male" value="male" checked>
+          <label for="male">Male</label>
+
+          <input type="radio" name="gender" id="female" value="female">
+          <label for="female">Female</label>
+        </div>
+
+
+        <label for="usrtype">:Type-</label>
+        <div class="wrapper-class">
+          <input type="radio" name="usrtype" id="reguser" value="reguser" checked>
+          <label for="reguser">Candidate</label>
+
+          <input type="radio" name="usrtype" id="regrecrut" value="regrecrut">
+          <label for="regrecrut">Recruiter</label>
+        </div>
+
+
+
+        <label for="account">Account Type:-</label>
+        <div class="wrapper-class">
+          <input type="radio" name="actype" id="normal" value="normal" checked>
+          <label for="normal">Normal</label>
+
+          <input type="radio" name="actype" id="Silver" value="silver">
+          <label for="silver">Silver</label>
+
+          <input type="radio" name="actype" id="Platinum" value="Platinum">
+          <label for="Platinum">Platinum</label>
+        </div>
+        <center> <button type="submit">Add New User</button></center>
+      </div>
+    </form>
+  </main>
+  <%- include('../includes/end.ejs') %>
+</body>

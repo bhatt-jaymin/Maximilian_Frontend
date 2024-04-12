@@ -231,3 +231,10 @@ Views ==> It's What the User Sees, Decoupled from your Application code
 
 Controls [Routes, Split across Middleware Functions] ==> Connecting your Models and your Views , contains the "in-between" both direction communicate logic
 
+
+
+Dynamic Routes & Advance Module
+===================================
+Passing Route Params
+Using Query Params
+Enhance our Models

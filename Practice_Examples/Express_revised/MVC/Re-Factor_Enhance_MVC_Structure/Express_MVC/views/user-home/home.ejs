@@ -1,0 +1,45 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/CSS/home.css" />
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <main>
+    
+
+    <% if (usrs.length > 0) { %>
+    <div class="grid">
+      <h5 class="heading__msg">Welcome, Guest User</h5>
+        <ul class="main-header__item-list">
+        </ul>
+      <h1 class="heading__title">Dashboard</h1>
+      
+      <% for (let user of usrs) { %>
+      <article class="card product-item">
+        <header class="card__header">
+          <h1 class="product__title"><%= user.title %></h1>
+        </header>
+        <div class="card__image">
+          <img src="<%= user.imageURL %>" alt="<%= user.title %>" />
+        </div>
+        <div class="card__content">
+          <h4 class="user__des"><%= user.desc %></h4>
+          <h4 class="user__skills"><%= user.skills %></h4>
+          <button class="btn">View</button>
+          <button class="btn">Short-List</button> 
+        </div>
+      </article>
+      <% } %>
+    </div>
+    <% } else { %>
+      <h5 class="heading__msg">Welcome, Guest User</h5>
+      <ul class="main-header__item-list">
+      </ul>
+    <h1 class="heading__title">Dashboard</h1>
+    <h1 class="notification__msg">Empty list</h1>
+    <% } %>
+  </main>
+  <%- include('../includes/end.ejs') %>
+</body>
+
+</html>
