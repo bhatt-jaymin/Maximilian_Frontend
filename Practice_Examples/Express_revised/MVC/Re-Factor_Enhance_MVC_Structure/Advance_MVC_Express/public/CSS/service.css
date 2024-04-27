@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html {
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 100%;
+}
+
+
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(160, 32, 240, 1) 50%, white 100%);
+  height: 100%;
+  background-attachment: fixed;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.background-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.active {
+  font-weight: bold;
+  color: #ff9900;
+}

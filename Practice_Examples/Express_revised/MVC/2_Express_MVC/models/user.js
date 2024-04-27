@@ -19,12 +19,21 @@ const  getUsersFromFile = cb => {
 }
 
 module.exports = class User {
-  constructor(t, d, s) {
+  constructor(t, d, s,img,stat,city,add,ph,gen,usrtpe,actype) {
     this.title = t;
     this.desc = d;
     this.skills = s;
+    this.imageURL=img;
+    this.state=stat;
+    this.city=city;
+    this.addrss=add;
+    this.phone=ph;
+    this.gender=gen;
+    this.usrtype=usrtpe;
+    this.actype=actype;
   }
 
+  /*title, imageURL, desc, skills, state,city,addrss,phone,gender,usrtype,actype*/
   save() {
     getUsersFromFile(users => {
       users.push(this);
@@ -40,4 +49,12 @@ module.exports = class User {
   static fetchAll(cb) {
    getUsersFromFile(cb)
   }
+
+  static findbyID(id,cb){
+    getUsersFromFile(users =>{
+      const user=users.find(u=>u.id===id);
+      cb(user)
+    });
+  }
 };
+

@@ -1,0 +1,56 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/CSS/admin/shrtlist.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <main>
+    <% if (shortlist.length > 0) { %>
+    <div class="grid">
+      <h1 class="heading__title">Shortlist Users List</h1>
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Skills</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let item of shortlist) { %>
+          <tr>
+            <td><%= item.title %></td>
+            <td><%= item.desc %></td>
+            <td>
+              <% let skillsArray = item.skills.split(','); %>
+              <% if (skillsArray.length > 3) { %>
+                <%= skillsArray.slice(0, 3).join(', ') + '...' %>
+              <% } else { %>
+                <%= skillsArray.join(', ') %>
+              <% } %>
+            </td>
+            
+            <td>
+              <a href="/admin/shortlist/<%= item.id %>" class="btn btn-view" title="View">
+                <i class="fa fa-eye"></i>
+              </a>
+              <button class="btn" title="Delete" type="submit"><i class="fa fa-trash"></i></button>
+              <!-- Add appropriate delete functionality here -->
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+    <h1 class="heading__title">Short-List User List</h1>
+    <h1 class="notification__msg">Empty Short-List User</h1>
+    <% } %>
+    <%- include('../includes/end.ejs') %>
+  </main>
+  <%- include('../includes/end.ejs') %>
+</body>
+</html>

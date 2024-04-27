@@ -1,0 +1,25 @@
+<header class="main-header flex items-center justify-between px-4 py-3 bg-gray-800">
+  <a class="navbar-brand text-white text-xl md:text-2xl lg:text-1xl" href="/">Zenith</a>
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list flex">
+      <li class="main-header__item">
+        <a class="<%= path === '/' ? 'active' :'' %>" href="/">Home</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/service' ? 'active' :'' %>" href="/service">Service</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/price' ? 'active' :'' %>" href="/price">Price</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/career' ? 'active' :'' %>" href="/career">Career</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/about' ? 'active' :'' %>" href="/about">About Us</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/contact' ? 'active' :'' %>" href="/contact">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>

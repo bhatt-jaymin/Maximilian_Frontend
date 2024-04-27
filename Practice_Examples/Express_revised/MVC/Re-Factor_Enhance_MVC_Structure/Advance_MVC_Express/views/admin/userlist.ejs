@@ -1,0 +1,55 @@
+<%- include('../includes/head.ejs') %>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body class="bg-opacity-60 bg-yellow-200">
+  <%- include('../includes/navigation.ejs') %>
+  <main class="p-4">
+    <% if (usrs.length > 0) { %>
+    <div class="grid">
+      <h1 class="text-center underline text-4xl text-gray-700 mb-0">User List</h1>
+      <table class="w-full mt-8">
+        <thead>
+          <tr class="bg-indigo-300">
+            <th class="p-4 text-lg text-gray-800">Name</th>
+            <th class="p-4 text-lg text-gray-800">Description</th>
+            <th class="p-4 text-lg text-gray-800">Skills</th>
+            <th class="p-4 text-lg text-gray-800">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let user of usrs) { %>
+          <tr class="border-b border-gray-300">
+            <td class="p-4 text-xl text-darkorchid"><%= user.title %></td>
+            <td class="p-4 text-xl text-slategrey"><%= user.desc %></td>
+            <td class="p-4 text-xl text-darkblue">
+              <% let skillsArray = user.skills.split(','); %>
+              <% if (skillsArray.length > 3) { %>
+                <%= skillsArray.slice(0, 3).join(', ') + '...' %>
+              <% } else { %>
+                <%= skillsArray.join(', ') %>
+              <% } %>
+            </td>
+            <td class="p-4">
+              <a href="/admin/viewuser/<%= user.id %>" class="btn btn-view" title="View">
+                <i class="fa fa-eye"></i>
+              </a>
+              <button class="btn" title="Delete" type="submit"><i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+    <h1 class="text-center underline text-4xl text-gray-700 mb-0">User List</h1>
+    <h1 class="text-center text-3xl text-darkgrey mt-20">User Empty list</h1>
+    <% } %>
+    <%- include('../includes/end.ejs') %>
+  </main>
+  <%- include('../includes/end.ejs') %>
+</body>
+</html>

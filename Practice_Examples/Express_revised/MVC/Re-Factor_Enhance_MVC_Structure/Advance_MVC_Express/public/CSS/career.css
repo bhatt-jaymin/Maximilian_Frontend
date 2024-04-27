@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  font-weight: bold;
+  color: #ff9900; /* Change this to your desired active link color */
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(160, 32, 240, 1) 50%, white 100%);
+  height: 100%;
+  background-attachment: fixed;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.background-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+
+.w-max {
+  margin: 0 auto; /* This will center the table horizontally */
+}
+
+a.btn.mb-3.md\:mb-0.md\:mr-4.px-6.py-1.md\:px-5.md\:py-0.text-center.md\:text-sm.font-bold {
+  background-color: aliceblue;
+  border-radius: 30%;
+  font-size: medium;
+}
+
+h1.text-4xl.font-bold.mb-4.text-white {
+  text-align: center;
+  text-decoration: underline;
+}

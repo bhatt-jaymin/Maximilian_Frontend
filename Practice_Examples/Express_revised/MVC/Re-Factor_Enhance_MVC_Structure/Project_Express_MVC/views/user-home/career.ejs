@@ -1,0 +1,56 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/CSS/career.css" />
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <%- include('../includes/newfrontnavigation.ejs') %>
+
+  <main class="bg-gradien">
+    <div class="content">
+      <% if (usrs.length > 0) { %>
+      <div class="grid">
+        <h1 class="text-4xl font-bold mb-4 text-white">Career</h1>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse border border-gray-300 bg-center">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 py-2 md:px-6 sm:px-4">Name</th>
+                <th class="border border-gray-300 py-2 md:px-6 sm:px-4">Description</th>
+                <th class="border border-gray-300 py-2 md:px-6 sm:px-4">Skills</th>
+                <th class="border border-gray-300 py-2 md:px-6 sm:px-4">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let user of usrs) { %>
+              <tr class="border border-gray-300">
+                <td class="border border-gray-300 px-4 py-2 text-white text-xl"><%= user.title %></td>
+                <td class="border border-gray-300 px-4 py-2 text-white text-xl"><%= user.desc %></td>
+                <td class="border border-gray-300 px-4 py-2 text-white text-xl">
+                  <% let skillsArray = user.skills.split(','); %>
+                  <% if (skillsArray.length > 3) { %>
+                    <%= skillsArray.slice(0, 3).join(', ') + '...' %>
+                  <% } else { %>
+                    <%= skillsArray.join(', ') %>
+                  <% } %>
+                </td>
+                <td class="border border-gray-300 px-4 py-2">
+                  <a class="btn mb-3 md:mb-0 md:mr-4 px-6 py-1 md:px-5 md:py-0 text-center md:text-sm font-bold" href="/">View</a>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <% } else { %>
+      <h1 class="text-2xl font-bold mb-4">User List</h1>
+      <h1 class="notification__msg">User Empty list</h1>
+      <% } %>
+    </div>
+    <div class="background-fix" style="background-image: linear-gradient(to bottom, rgba(160, 32, 240, 1) 50%, white 100%);"></div>
+    
+    </main>
+
+    <%- include('../includes/end.ejs') %>
+  </body>

@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button.w-6.h-8.rounded-full.bg-yellow-500.dark\:bg-yellow-700.mr-2 {
+  height: 2rem;
+  width: 11rem;
+  border-radius: 1rem;
+  margin-left: 30rem;
+  margin-top: 3rem;
+}
+
+button.w-6.h-6.rounded-full.bg-yellow-500.dark\:bg-yellow-700.mr-2 {
+  height: 2rem;
+  width: 7rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+img.w-full.h-full.object-cover {
+  height: 25rem;
+  width: 23rem;
+  border-radius: 3rem;
+}
+
+h4.text-4xl.font-bold.text-gray-800.dark\:text-white.mb-1 {
+  font-size: x-large;
+  color: darkblue;
+}
+
+span.font-bold.text-gray-700.dark\:text-gray-300 {
+  font-size: x-large;
+  color: crimson;
+}
+
+p.text-gray-600.dark\:text-gray-300.text-2xl.mt-2 {
+  color: cornflowerblue;
+  font-size: xx-large;
+  display: contents;
+}
+
+span.text-gray-600.dark\:text-gray-300 {
+  font-size: x-large;
+  padding: 1rem;
+  padding-top: 5rem;
+  color: brown;
+  font-weight: 700;
+}
+h1.heading__title {
+  font-size: xxx-large;
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: bolder;
+  color: darkorchid;
+  background-color: transparent;
+}
+
+.h-\[460px\].rounded-lg.bg-gray-300.dark\:bg-gray-700.mb-4 {
+  padding-top: 0rem;
+  margin-top: 3rem;
+  background-color: transparent;
+  border-radius: 5rem;
+}
+
+p.text-gray-600.dark\:text-gray-300.text-sm.mb-4 {
+  font-size: x-large;
+  color: red;
+  font-weight: bold;
+}
+
+.text-gray-600.dark\:text-gray-300.text-2xl.mt-2 .special-text {
+  color: brown;
+  font-size: x-large;
+  font-weight: 700;
+  word-spacing: 10px;
+}
+

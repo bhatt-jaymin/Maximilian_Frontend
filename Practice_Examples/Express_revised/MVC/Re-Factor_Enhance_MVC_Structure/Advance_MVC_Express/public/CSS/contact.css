@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  font-weight: bold;
+  color: #ff9900; /* Change this to your desired active link color */
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(160, 32, 240, 1) 50%, white 100%);
+  height: 100%;
+  background-attachment: fixed;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.background-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .fade-in-text {
+    margin-left: 1rem;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .display-5 {
+    margin-left: 1rem; /* Adjust margin for smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-96 {
+    width: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+    color: lightblue;
+    font-size: 4rem;
+    /* border-radius: 71%; */
+  }
+}
+
+a.text-white.bg-primary-600.hover\:bg-primary-700.focus\:ring-4.focus\:ring-primary-200.font-medium.rounded-lg.text-sm.px-5.py-2\.5.text-center.dark\:text-white.dark\:focus\:ring-primary-900 {
+    color: blueviolet;
+    font-size: x-large;
+    background-color: rgb(220, 220, 220);
+}
+
+a.text-white.bg-primary-600.hover\:bg-primary-700.focus\:ring-4.focus\:ring-primary-200.font-medium.rounded-lg.text-sm.px-5.py-2\.5.text-center.dark\:text-white.dark\:focus\:ring-primary-900:hover {
+    color: rgb(138, 43, 226,0.3);
+    background-color: rgb(220, 220, 220,0.7);;
+
+}
+
+div#contact {
+  background-color: transparent;
+}

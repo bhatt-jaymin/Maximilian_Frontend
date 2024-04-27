@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  font-weight: bold;
+  color: #ff9900; /* Change this to your desired active link color */
+}
+
+body,html {
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 100%;
+}
+
+
+.bg-gradient {
+  background: linear-gradient(to bottom, rgba(160, 32, 240, 1) 50%, white 100%);
+  height: 100%;
+  background-attachment: fixed;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.background-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.active {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+
+h4.h1.text-4xl.font-bold.text-white.mt2 {
+  margin-top: 1rem;
+}
+.main-header__item a {
+  color: rgb(202, 187, 52);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+  color: #42b87dc9;
+  font-weight: bold;
+}
+
+.product__title {
+  margin-top: 3rem;
+  margin-left: 0.5%;
+  text-align: left;
+  font-size: x-large;
+}
+
+.heading__title {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 0%;
+  color: rgba(122, 114, 114, 0.9);
+}
+
+.heading__msg {
+  text-align: right;
+  font-size: large;
+  margin-top: 0%;
+  color: rgba(10, 5, 80, 0.7);
+}
+
+img {
+  opacity: 0.6;
+  filter: grayscale(100%);
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
+
+.user__des {
+  margin-left: 0.2rem;
+  margin-top: 0.3rem;
+  color: slategrey;
+  font-size: x-large;
+}
+
+.user__skills {
+  margin-left: 0.3rem;
+  margin-top: -1%;
+  color: darkblue;
+}
+
+.notification__msg {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 3rem;
+  color: darkgrey;
+}
+
+.heading__user {
+  color: rgb(202, 187, 52);
+  margin: 0;
+}
+
+.hero-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: 50rem;
+}
+
+.bg-overlay,
+.hero-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mb-3 {
+  margin-bottom: 1rem; /* Adjusted margin bottom */
+}
+
+.fade-in-text {
+  font-size: 2.25rem; /* Adjusted font size */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 6rem;
+  margin-left: 35%;
+  font-size: 4rem;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.display-5 {
+  font-size: 1.25rem; /* Adjusted font size */
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  margin-top: -2.5rem;
+  margin-left: 35rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .fade-in-text {
+    margin-left: 1rem;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .display-5 {
+    margin-left: 1rem; /* Adjust margin for smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-96 {
+    width: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+    color: lightblue;
+    font-size: 4rem;
+    /* border-radius: 71%; */
+  }
+}
+
+a.text-white.bg-primary-600.hover\:bg-primary-700.focus\:ring-4.focus\:ring-primary-200.font-medium.rounded-lg.text-sm.px-5.py-2\.5.text-center.dark\:text-white.dark\:focus\:ring-primary-900 {
+    color: blueviolet;
+    font-size: x-large;
+    background-color: rgb(220, 220, 257);
+}
+
+a.text-white.bg-primary-600.hover\:bg-primary-700.focus\:ring-4.focus\:ring-primary-200.font-medium.rounded-lg.text-sm.px-5.py-2\.5.text-center.dark\:text-white.dark\:focus\:ring-primary-900:hover {
+    color: rgba(88, 14, 156, 0.7);
+    background-color: rgba(231, 165, 220, 0.9);
+    
+
+}

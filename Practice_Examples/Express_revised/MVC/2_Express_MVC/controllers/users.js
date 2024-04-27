@@ -13,7 +13,15 @@ exports.postAddUserMsg = (req, res, next) => {
   const user = new User(
     req.body.title,
     req.body.desc,
-    req.body.skills
+    req.body.skills,
+    req.body.imageURL,
+    req.body.state,
+    req.body.city,
+    req.body.addrss,
+    req.body.phone,
+    req.body.gender,
+    req.body.usrtype,
+    req.body.acttype
   );
   user.save();
   res.send(
